@@ -17,7 +17,10 @@ jobs:
           command: npm run backend:install
       - run:
           name: install frontend dependencies
-          command: npm run frontend:install    
+          command: npm run frontend:install
+      - run:
+          name: install yarn
+          command: npm install yarn  
       - run:
           name: build backend
           command: npm run backend:build    
