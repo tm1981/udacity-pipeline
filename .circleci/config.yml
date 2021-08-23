@@ -13,6 +13,14 @@ jobs:
       - checkout
       # install dependencies in both apps
       - run:
-          name: hello
-          command: |
-            echo "hello-world"
+          name: install server dependencies
+          command: npm run backend:install
+      - run:
+          name: install frontend dependencies
+          command: npm run frontend:install    
+      - run:
+          name: build backend
+          command: npm run backend:build    
+      - run:
+          name: build frontend
+          command: npm run frontend:build 
